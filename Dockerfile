@@ -33,7 +33,7 @@ COPY --chown=1001:0 opt/app-root/. /opt/app-root/
 RUN python3 -m venv /opt/app-root/venv && \
     . /opt/app-root/venv/bin/activate && \
     pip install --no-cache-dir --upgrade pip setuptools wheel && \
-    pip install --no-cache-dir mod_wsgi==4.6.7 warpdrive==0.31.0 && \
+    pip install --no-cache-dir mod_wsgi==4.7.0 warpdrive==0.33.0 && \
     fix-permissions /opt/app-root
 
 ENV BASH_ENV=/opt/app-root/etc/profile \
